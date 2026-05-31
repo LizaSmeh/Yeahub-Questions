@@ -1,0 +1,17 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f4f4f4;
+}
+
+.main {
+  background-color: #f4f4f4;
+  display: flex;
+  gap: 20px;
+  min-width: 1440px;
+  justify-content: center;
+  padding-top: 40px;
+  flex: 1;
+  padding-bottom: 40px;
+}
