@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import styles from "./List.module.css";
-import { Pagination } from "../Pagonation/Pagination.jsx";
+import { Pagination } from "../Pagination/Pagination.jsx";
 import { useFetch } from "../../hooks/useFetch.jsx";
 import { questionsUrlParams } from "../../api/questions-url-params.js";
 import { QuestionCard } from "../QuestionCard/QuestionCard.jsx";
