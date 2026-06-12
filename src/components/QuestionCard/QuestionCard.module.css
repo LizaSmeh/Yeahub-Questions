@@ -1,0 +1,131 @@
+
+.question {
+    padding: 24px;
+     background-color: #FFFFFF;
+     box-shadow: 0 4px 10px #6A63761A;
+     border-radius: 8px;
+     display: flex;
+   flex-direction: column;
+   gap: 24px;
+}
+
+.question-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  
+     
+}
+
+.title {
+
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ font-size: 20px;
+ font-weight: 500;
+ line-height: 120%;
+ 
+}
+
+.title::before {
+    content: '';
+   flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    background: #5533FF;
+    border-radius: 50%;
+}
+
+.arrow-box {
+    width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.arrow-up {
+    width: 6px;
+  height: 6px;
+  border-top: 1.67px solid #6A0BFF;
+  border-left: 1.67px solid #6A0BFF;
+  transform: rotate(45deg);
+  margin-top: 4px;
+}
+
+.arrow-down{
+    width: 6px;
+  height: 6px;
+  border-top: 1.67px solid #6A0BFF;
+  border-left: 1.67px solid #6A0BFF;
+  margin-bottom: 4px;
+  transform: rotate(-135deg);
+}
+.question-data {
+display: flex;
+flex-direction: column;
+gap: 24px;
+}
+
+.frame {
+    display: flex;
+    gap: 40px;
+    
+}
+
+
+
+.frame-rating, .frame-difficulty {
+    display: flex;
+    align-items: center;
+    background-color: #F8F8F8;
+    border-radius: 8px;
+     padding: 6px 10px;
+    gap: 10px;
+}
+
+.rating, .difficulty {
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 120%;
+       
+}
+.number {
+    padding: 2px 4px;
+    background-color: #6A0BFF;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 14px;
+
+}
+
+.img {
+    border-radius: 16px;
+}
+
+.answer {
+    color: #474747;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.more-detailed {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 8px;
+
+}
+
+.more-detailed span {
+    color: #6A0BFF;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 110%;
+    
+}

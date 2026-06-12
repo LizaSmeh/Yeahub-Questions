@@ -1,0 +1,54 @@
+.sidebar {
+    width: 392px;
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+}
+
+.frame {
+    display: flex;
+    align-items: center;
+    background-color: #F8F8F8;
+    border-radius: 8px;
+     padding: 6px 10px;
+    gap: 10px;
+}
+
+.level {
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 120%;
+       
+}
+.number {
+    padding: 2px 4px;
+    background-color: #6A0BFF;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 14px;
+
+}
+
+.item {
+    height: 42px;
+    padding: 6px 12px;
+    border-radius: 12px ;
+    background-color:  #FFFFFF;
+    border: 1px solid #BABABA; 
+    font-size: 16px;
+    color: #303030;
+    font-weight: 500;
+    line-height: 120%;
+     border-color: #6A0BFF;
+}
+
+.tag {
+   color: #6A0BFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+}

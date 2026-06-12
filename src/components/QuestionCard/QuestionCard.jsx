@@ -1,5 +1,7 @@
-import styles from "../List.module.css";
-import { MarkdownViewer } from "../../../utils/markdown-viewer";
+import styles from "./QuestionCard.module.css";
+import { MarkdownViewer } from "../MarkdownViewer/MarkdownViewer";
+import { Link } from "react-router";
+import { detailedIcon } from "../../icons";
 
 export const QuestionCard = ({ item, isOpen, onToggle }) => {
   return (
@@ -34,7 +36,14 @@ export const QuestionCard = ({ item, isOpen, onToggle }) => {
 
             <div className={styles.answer}>
               <MarkdownViewer text={item.shortAnswer}></MarkdownViewer>
-              </div>
+            </div>
+            <Link
+              to={`/question/${item.id}`}
+              className={styles["more-detailed"]}
+            >
+              <span>Подробнее</span>
+              <img src={detailedIcon} alt="" />
+            </Link>
           </div>
         )}
       </div>

@@ -1,4 +1,4 @@
-import styles from "../Sidebar.module.css";
+import styles from "./Search.module.css";
 
 export const Search = ({ value, onChange, onPage }) => {
   const handleSearch = (e) => {

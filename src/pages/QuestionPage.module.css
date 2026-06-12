@@ -1,0 +1,43 @@
+.question-page {
+background-color: #f4f4f4;
+  display: flex;
+  gap: 20px;
+  min-width: 1440px;
+  justify-content: center;
+  padding-top: 40px;
+  flex: 1;
+  padding-bottom: 40px;
+     
+}
+
+.question-detailed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.btn-back span {
+    padding: 4px 4px 0px;
+
+    font-size: 16px;
+    color: #6A0BFF;
+    font-weight: 500;
+    line-height: 120%;
+
+}
+
+.page-content {
+    display: flex;
+    gap: 20px;
+   }
+

@@ -1,7 +1,7 @@
-import styles from "./Category.module.css";
+import styles from "./Filter.module.css";
 import { useState } from "react";
 
-export const Category = ({
+export const Filter = ({
   title,
   items,
   showAll = true,

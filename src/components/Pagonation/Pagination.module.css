@@ -1,0 +1,35 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+
+}
+.back, .forward {
+    width: 28px;
+    height: 28px;
+    border-radius: 23px;
+    border: 1px solid #6A0BFF;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-pagination,.active {
+    color: #474747;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+.active {
+    padding: 6px;
+    background-color: #6A0BFF ;
+    color:#FFFFFF;
+    border-radius: 2px;
+    
+}

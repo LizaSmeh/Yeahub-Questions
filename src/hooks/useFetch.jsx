@@ -6,6 +6,8 @@ export const useFetch = (url) => {
   const [error, setError] = useState(null);
   const [total, setTotal] = useState(0);
   useEffect(() => {
+    let cancelled = false;
+    console.log('Начинаю загрузку данных по URL:', url);
     const fetchData = async () => {
       try {
         setIsLoading(true);
@@ -16,8 +18,9 @@ export const useFetch = (url) => {
         }
 
         const result = await response.json();
-
-        setData(result.data);
+        if (cancelled) return;
+        console.log('Результат загрузки:', result);
+        setData(result.data ?? result);
         setTotal(result.total);
       } catch (error) {
         setError(error.message);
@@ -26,6 +29,9 @@ export const useFetch = (url) => {
       }
     };
     fetchData();
+    return () => {
+      cancelled = true; 
+    };
   }, [url]);
 
   return { data, total, isLoading, error };

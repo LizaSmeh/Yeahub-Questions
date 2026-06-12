@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import styles from "./List.module.css";
-import { Pagination } from "./components/Pagination.jsx";
+import { Pagination } from "../Pagonation/Pagination.jsx";
 import { useFetch } from "../../hooks/useFetch.jsx";
 import { questionsUrlParams } from "../../api/questions-url-params.js";
-import { QuestionCard } from "./components/QuestionCard.jsx";
+import { QuestionCard } from "../QuestionCard/QuestionCard.jsx";
 import { useDebounse } from "../../hooks/useDebounse.jsx";
 
 export const List = ({ search, page, setPage, filters, specializations }) => {
@@ -12,15 +12,16 @@ export const List = ({ search, page, setPage, filters, specializations }) => {
   const debounseSearch = useDebounse(search);
 
   const url = useMemo(() => {
-    return questionsUrlParams({
+    const generatedUrl = questionsUrlParams({
       page,
       limit: 10,
       search: debounseSearch,
       filters,
     });
+    console.log("Генерируемый URL:", generatedUrl);
+    return generatedUrl;
   }, [page, debounseSearch, filters]);
 
-  console.log(url);
   const { data, total } = useFetch(url);
   const questions = data || [];
 
@@ -37,7 +38,6 @@ export const List = ({ search, page, setPage, filters, specializations }) => {
   const currentSpecialization = specializations.find(
     (item) => item.slug === filters.specialization,
   );
-  console.log(specializations);
 
   return (
     <section className={styles["list-question"]}>

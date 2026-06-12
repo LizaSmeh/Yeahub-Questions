@@ -1,6 +1,6 @@
 import styles from "./Sidebar.module.css";
-import { Category } from "./components/Category";
-import { Search } from "./components/Search";
+import { Filter } from "../Filter/Filter";
+import { Search } from "../Search/Search";
 import { difficultyLevels, ratingLevels } from "../../constants/filters";
 import { toggleArrayItem } from "../../utils/toggle-array-item";
 import { useMemo, useEffect } from "react";
@@ -16,7 +16,6 @@ export const Sidebar = ({
   specializations,
 }) => {
   const { data: skills } = useApiCategory(API.SKILLS);
-  //const { data: specializations = [] } = useSpecialization();
 
   useEffect(() => {
     if (!specializations.length) return;
@@ -59,34 +58,32 @@ export const Sidebar = ({
     <section className={styles.filter}>
       <Search value={search} onChange={setSearch} onPage={setPage} />
 
-      <Category
+      <Filter
         title="Специализация"
         items={specializations}
         isActive={(item) => filters.specialization === item.slug}
         onSelect={(item) => hadleSpecialization(item.slug)}
       />
-      <Category
+      <Filter
         title="Навыки"
         items={filteredSkills}
         onSelect={(item) => toggleFilter("skills", item.id)}
         isActive={(item) => filters.skills.includes(item.id)}
       />
-      <Category
+      <Filter
         title="Уровень сложности"
         items={difficultyLevels}
         onSelect={(item) => toggleFilter("difficulty", item.id)}
         isActive={(item) => filters.difficulty.includes(item.id)}
         showAll={false}
       />
-      <Category
+      <Filter
         title="Рейтинг"
         items={ratingLevels}
         onSelect={(item) => toggleFilter("rating", item.id)}
         isActive={(item) => filters.rating.includes(item.id)}
         showAll={false}
       />
-      {/* <Category title='Статус' items={status} showAll={false}/>
-       */}
     </section>
   );
 };
